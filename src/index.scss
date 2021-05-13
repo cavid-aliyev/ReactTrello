@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  background-image: url("./assets/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+* {
+  outline: none;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+button,
+textarea {
+  font-size: 14px;
+}
+
+html,
+body,
+.app,
+#root {
+  height: 100%;
+}
+
+.app {
+  white-space: nowrap;
+}
+
+.remove-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  img {
+    width: 12px;
+  }
+  &:hover {
+    background-color: rgba(9, 30, 66, 0.13);
+  }
+}
