@@ -1,11 +1,13 @@
-import React from "react";
+import React, { ReactChildren, ReactNode } from "react";
 
 interface ICart {
-  text: string;
+  children: string | ReactNode;
 }
 
-const Cart: React.FC<ICart> = ({ text }) => {
-  return <div className="cart">{text}</div>;
+const Cart: React.FC<ICart> = ({ children }) => {
+  return <div className="cart">
+    {children}
+    </div>;
 };
 
 export default Cart;

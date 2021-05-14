@@ -1,5 +1,5 @@
 import React from "react";
-import { Cart, Button } from "../Components";
+import { Cart, AddForm } from "../Components";
 
 interface IPanel {
   items: any[];
@@ -8,9 +8,12 @@ interface IPanel {
 const Panel: React.FC<IPanel> = ({ items }) => {
   return (
     <div className="panel">
-      {items.map((cart) => (
-        <Cart {...cart} />
-      ))}
+      <div className="panel__items">
+        {items.map((cart) => (
+          <Cart>{cart.text}</Cart>
+        ))}
+      </div>
+      <AddForm />
     </div>
   );
 };

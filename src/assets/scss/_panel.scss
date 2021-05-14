@@ -1,6 +1,29 @@
-.panel{
-    background: #dfe3e6;
-    border-radius: 3px;
-    padding: 12px;
-    width: 272px;
+.panel {
+  background: #dfe3e6;
+  border-radius: 3px;
+  padding: 12px 0 0 0;
+  width: 272px;
+  &__items {
+    padding: 12px 12px 0 12px;
+  }
+
+  &__bottom {
+    &-add-btn {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border-radius: 0 0 3px 3px;
+      cursor: pointer;
+      color: #6b808c;
+
+      &:hover {
+        background-color: darken(#dfe3eb, 10);
+        color: darken(#6b808c, 50);
+      }
+
+      img {
+        margin-right: 8px;
+      }
+    }
+  }
 }
