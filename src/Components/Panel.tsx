@@ -2,17 +2,17 @@ import React from "react";
 import { Cart, AddForm } from "../Components";
 
 interface IPanel {
-  items: any[];
+  carts: any[] | null;
 }
 
-const Panel: React.FC<IPanel> = ({ items }) => {
+const Panel: React.FC<IPanel> = ({ carts }) => {
   return (
-    <div className="panel">
-      <div className="panel__items">
-        {items.map((cart) => (
-          <Cart>{cart.text}</Cart>
+    <div className='panel'>
+      {carts && (<div className="panel__items">
+        {carts.map((cart, index) => (
+          <Cart key={index}>{cart.text}</Cart>
         ))}
-      </div>
+      </div>)}
       <AddForm />
     </div>
   );

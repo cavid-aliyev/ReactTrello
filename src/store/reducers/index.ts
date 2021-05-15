@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
-import {columns} from './columns'
+import {panels} from './panels'
+import {carts} from './carts'
 
 export const rootReducer =  combineReducers({
-    columns
+    panels,
+    carts
   });

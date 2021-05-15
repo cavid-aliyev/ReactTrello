@@ -1,13 +1,14 @@
 import React from "react";
 import "./App.scss";
-import {Panel} from "./Components";
+import { Panel } from "./Components";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Panel
-        items={[{ text: "Todo" }, { text: "Todo2" }, { text: "Todo 3" }]}
+        carts={[{ text: "Todo" }, { text: "Todo2" }, { text: "Todo 3" }]}
       />
+      <Panel carts={null} />
     </div>
   );
 }

@@ -22,27 +22,29 @@ textarea {
 
 html,
 body,
-.app,
+// .app,
 #root {
   height: 100%;
 }
 
 .app {
   white-space: nowrap;
+  display: flex;
+  align-items: flex-start;
 }
 
-.remove-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3px;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  img {
-    width: 12px;
-  }
-  &:hover {
-    background-color: rgba(9, 30, 66, 0.13);
-  }
-}
+// .remove-btn {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   border-radius: 3px;
+//   width: 24px;
+//   height: 24px;
+//   cursor: pointer;
+//   img {
+//     width: 12px;
+//   }
+//   &:hover {
+//     background-color: rgba(9, 30, 66, 0.13);
+//   }
+// }

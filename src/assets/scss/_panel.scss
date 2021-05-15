@@ -3,6 +3,8 @@
   border-radius: 3px;
   padding: 12px 0 0 0;
   width: 272px;
+  margin-right: 12px;
+
   &__items {
     padding: 12px 12px 0 12px;
   }
@@ -12,7 +14,7 @@
       display: flex;
       align-items: center;
       padding: 12px;
-      border-radius: 0 0 3px 3px;
+      border-radius: 3px;
       cursor: pointer;
       color: #6b808c;
 
