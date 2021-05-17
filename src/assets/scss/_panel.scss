@@ -5,6 +5,11 @@
   width: 272px;
   margin-right: 12px;
 
+  &__title{
+    padding: 12px;
+    padding-bottom: 0;
+  }
+
   &__items {
     padding: 12px 12px 0 12px;
   }
