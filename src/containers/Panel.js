@@ -1,9 +1,14 @@
-import {Panel} from '../Components'
-import {connect} from 'react-redux'
+import { Panel } from "../Components";
+import { connect } from "react-redux";
+import { Fragment } from "react";
 
+const Panels = ({ items }) => (
+  <Fragment>
+    {items.map((item, index) => (
+      <Panel key={index} {...item} />
+    ))}
+    <Panel/>
+  </Fragment>
+);
 
-
-const Panels = ({items}) => items.map((item, index) => <Panel key={index} {...item}/>);
-
-
-export default  connect(({panels}) => panels)(Panels)
+export default connect(({ panels }) => panels)(Panels);

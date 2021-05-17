@@ -10,6 +10,10 @@ const initialState = {
       title: "Name of panel",
       carts: ["Todo", "Todo2", "Todo 3"],
     },
+    {
+      title: "Name of panel 2",
+      carts: ["Stuff", "Stuff2", "Stuff 3"],
+    },
   ],
 };
 

@@ -3,7 +3,13 @@ import { Cart, Button } from "../Components";
 import clearIcon from "../assets/clear.svg";
 import addIcon from "../assets/add.svg";
 
-const AddForm: React.FC = () => {
+interface IAddForm {
+  isEmptyPanel: boolean;
+  // ?create
+  onAdd?: any
+}
+
+const AddForm: React.FC<IAddForm> = ({onAdd,  isEmptyPanel }) => {
   const [showForm, setShowForm] = React.useState(false);
   const textareaRef = React.useRef<HTMLTextAreaElement>(null);
 
@@ -24,11 +30,15 @@ const AddForm: React.FC = () => {
               <textarea
                 ref={textareaRef}
                 rows={3}
-                placeholder="Enter a title for this card"
+                placeholder={
+                  isEmptyPanel ? "Create column" : "Enter a title for this card"
+                }
               ></textarea>
             </Cart>
             <div className="add-form__bottom">
-              <Button text="Add cart" />
+              <Button text={
+                  isEmptyPanel ? "Add column" : "Add cart"
+                } />
               <img
                 onClick={handleShowForm}
                 className="add-form__bottom-clear"
@@ -42,7 +52,9 @@ const AddForm: React.FC = () => {
         <div className="panel__bottom">
           <div className="panel__bottom-add-btn">
             <img src={addIcon} alt="Plus" />
-            <span onClick={handleShowForm}>Add another card</span>
+            <span onClick={handleShowForm}>{
+                  isEmptyPanel ? "Create another column" : "Add another cart"
+                }</span>
           </div>
         </div>
       )}
