@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import {panels} from './panels'
+import { panels } from "./panels";
 
-export const rootReducer =  combineReducers({
-    panels,
-  });
+export const rootReducer = combineReducers({
+  panels,
+});

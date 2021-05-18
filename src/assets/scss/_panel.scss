@@ -5,9 +5,11 @@
   width: 272px;
   margin-right: 12px;
 
-  &__title{
+  &__title {
     padding: 12px;
     padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__items {

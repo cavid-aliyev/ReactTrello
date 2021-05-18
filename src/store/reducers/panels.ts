@@ -26,7 +26,7 @@ export const panels = (
       return {
         ...state,
         items: state.items.map((item, index) => {
-          if (action.payload.index === index) {
+          if (action.payload.panelIndex === index) {
             return {
               ...item,
               carts: [...item.carts, action.payload.text],
@@ -35,7 +35,7 @@ export const panels = (
           return item;
         }),
       };
-    case PanelsActionTypes.PANELS_ADD:
+    case PanelsActionTypes.ADD_PANEL:
       return {
         ...state,
         items: action.payload,

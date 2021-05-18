@@ -5,19 +5,19 @@ export interface IPanelState {
 
 export enum PanelsActionTypes {
   CARTS_ADD = "CARTS_ADD",
-  PANELS_ADD = "PANELS_ADD",
+  ADD_PANEL = "ADD_PANEL",
 }
 
 interface CartAddAction {
   type: PanelsActionTypes.CARTS_ADD;
   payload: {
-    index: number;
+    panelIndex: number;
     text: string;
   };
 }
 
 interface PanelsAddAction {
-  type: PanelsActionTypes.PANELS_ADD;
+  type: PanelsActionTypes.ADD_PANEL;
   payload: any[];
 }
 

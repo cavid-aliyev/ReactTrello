@@ -1,13 +1,12 @@
-.button{
-    background: #39c071;
-    border-radius: 3px;
-    color: #fff;
-    padding: 9px 12px;
-    cursor: pointer;
-    font-weight: bold;
+.button {
+  background: #39c071;
+  border-radius: 3px;
+  color: #fff;
+  padding: 9px 12px;
+  cursor: pointer;
+  font-weight: bold;
 
-    &:hover{
-        background: lighten(#39c071, 5)
-    }
-
+  &:hover {
+    background: lighten(#39c071, 5);
+  }
 }

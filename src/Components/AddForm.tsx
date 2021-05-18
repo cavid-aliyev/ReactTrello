@@ -5,12 +5,19 @@ import addIcon from "../assets/add.svg";
 
 interface IAddForm {
   isEmptyPanel: boolean;
-  // ?create
-  onAdd?: any
+  onAddPanel?: any;
+  onAddCart?: any;
+  panelIndex?: number;
 }
 
-const AddForm: React.FC<IAddForm> = ({onAdd,  isEmptyPanel }) => {
+const AddForm: React.FC<IAddForm> = ({
+  panelIndex,
+  onAddPanel,
+  onAddCart,
+  isEmptyPanel,
+}) => {
   const [showForm, setShowForm] = React.useState(false);
+  const [value, setValue] = React.useState("");
   const textareaRef = React.useRef<HTMLTextAreaElement>(null);
 
   const handleShowForm = () => {
@@ -28,6 +35,8 @@ const AddForm: React.FC<IAddForm> = ({onAdd,  isEmptyPanel }) => {
           <div className="add-form__input">
             <Cart>
               <textarea
+                onChange={(e) => setValue(e.target.value)}
+                value={value}
                 ref={textareaRef}
                 rows={3}
                 placeholder={
@@ -36,9 +45,14 @@ const AddForm: React.FC<IAddForm> = ({onAdd,  isEmptyPanel }) => {
               ></textarea>
             </Cart>
             <div className="add-form__bottom">
-              <Button text={
-                  isEmptyPanel ? "Add column" : "Add cart"
-                } />
+              <Button
+                onClick={
+                  isEmptyPanel
+                    ? onAddPanel
+                    : onAddCart.bind(this, panelIndex, value)
+                }
+                text={isEmptyPanel ? "Add column" : "Add cart"}
+              />
               <img
                 onClick={handleShowForm}
                 className="add-form__bottom-clear"
@@ -52,9 +66,9 @@ const AddForm: React.FC<IAddForm> = ({onAdd,  isEmptyPanel }) => {
         <div className="panel__bottom">
           <div className="panel__bottom-add-btn">
             <img src={addIcon} alt="Plus" />
-            <span onClick={handleShowForm}>{
-                  isEmptyPanel ? "Create another column" : "Add another cart"
-                }</span>
+            <span onClick={handleShowForm}>
+              {isEmptyPanel ? "Create another column" : "Add another cart"}
+            </span>
           </div>
         </div>
       )}
