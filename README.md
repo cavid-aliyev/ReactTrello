@@ -7,6 +7,7 @@ Try — http://react-kanban-board.surge.sh/
 ## Using Stacks
 
 - ReactJS
+- TypeScript
 - Redux
 - React Beautiful DND
 - SASS
