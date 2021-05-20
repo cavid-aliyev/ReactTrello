@@ -2,7 +2,7 @@
 
 Try — http://react-kanban-board.surge.sh/
 
-![]('./src/assets/Screenshot_2.png')
+<img src="./src/assets/Screenshot_2.png" title="trello"/>
 
 ## Using Stacks
 
