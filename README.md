@@ -2,7 +2,7 @@
 
 Try — http://react-kanban-board.surge.sh/
 
-![](https://image.prntscr.com/image/e4X4bld8SYCe8FD_ijBTqQ.png)
+![]('./src/assets/Screenshot_2.png')
 
 ## Using Stacks
 
