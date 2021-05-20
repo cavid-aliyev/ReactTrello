@@ -1,4 +1,4 @@
-# Custom Trello board for helping teams get things done efficiently.
+# Custom Trello board for help teams get things done efficiently.
 
 Try — http://react-kanban-board.surge.sh/
 
