@@ -11,17 +11,17 @@ const initialState = {
     {
       title: "План на месяц",
       carts: [
-        "Пройти курс по React",
-        "Отметить день рождения",
-        "Записаться на курсы английского языка, чтобы уехать жить в ЛА",
+        "Play Football match",
+        "Remove Birthday",
+        "Listen STFU Podcast",
       ],
     },
     {
       title: "План на день",
       carts: [
-        "Записаться на курс по React",
-        "Забронировать тир на субботу",
-        "Накидать тем для статей в блог",
+        "Learn NodeJS",
+        "Translate Russian law stuffs",
+        "Write some work code",
       ],
     },
   ],
@@ -48,8 +48,8 @@ export const panels = (
     case PanelsActionTypes.CARTS_REMOVE:
       return {
         ...state,
-        items: state.items.map((item, columnIndex) => {
-          if (action.payload.panelIndex === columnIndex) {
+        items: state.items.map((item, panelIndex) => {
+          if (action.payload.panelIndex === panelIndex) {
             return {
               ...item,
               carts: item.carts.filter(

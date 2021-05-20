@@ -4,18 +4,20 @@ import clearIcon from "../assets/clear.svg";
 import addIcon from "../assets/add.svg";
 
 interface IAddForm {
-  value: any;
-  showForm: any;
-  setValue: any;
-  textareaRef: string;
-  setShowForm: any;
-  onAdd: any;
-  isEmptyPanel: boolean;
+  value?: any;
+  showForm?: any;
+  setValue?: any;
+  panelIndex?: number
+  textareaRef?: string;
+  setShowForm?: any;
+  onAdd?: any;
+  isEmptyPanel?: boolean;
 }
 
 const AddForm: React.FC<IAddForm> = ({
   value,
   showForm,
+  panelIndex,
   setValue,
   textareaRef,
   setShowForm,

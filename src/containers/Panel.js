@@ -13,7 +13,7 @@ const Panels = ({
   removePanel,
   reorderCarts,
 }) => {
-  const onDragEnd = result => {
+  const onDragEnd = (result) => {
     const { source, destination } = result;
     if (
       !destination ||
@@ -24,7 +24,7 @@ const Panels = ({
     }
     reorderCarts({
       source,
-      destination
+      destination,
     });
   };
 
@@ -35,7 +35,7 @@ const Panels = ({
           <Panel
             {...item}
             key={index}
-            columnIndex={index}
+            panelIndex={index}
             onAddPanel={addPanel}
             onAddCart={addCart}
             onRemove={removePanel}
@@ -43,7 +43,7 @@ const Panels = ({
           />
         ))}
       </DragDropContext>
-      <Panel onAddColumn={addPanel} onAddCard={addCart} />
+      <Panel onAddPanel={addPanel} onAddCart={addCart} />
     </Fragment>
   );
 };

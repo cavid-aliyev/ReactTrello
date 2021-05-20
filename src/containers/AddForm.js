@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
-import { AddForm as AddFormBase } from "../Components/AddForm";
+import { useState, useRef, useEffect } from "react";
+import { AddForm as AddFormBase } from "../Components";
 
 const AddForm = ({ panelIndex, onAddCart, onAddPanel, isEmptyPanel }) => {
   const [showForm, setShowForm] = useState(false);
